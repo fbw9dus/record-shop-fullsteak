@@ -1,0 +1,17 @@
+{
+  "name": "record-shop-fullsteak",
+  "version": "29.2.32",
+  "description": "frontend und backend gleichzeitig laufen lassen",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "npm --prefix record-shop-frontend start",
+    "backend": "PORT=3001 npm --prefix record-shop-backend run watch",
+    "install-all": "( cd record-shop-backend; yarn install; ); ( cd record-shop-frontend; yarn install; );"
+  },
+  "author": "fbw9@dus",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "concurrently": "^5.1.0"
+  }
+}
