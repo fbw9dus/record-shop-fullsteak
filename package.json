@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"npm run frontend\" \"npm run backend\"",
     "frontend": "npm --prefix record-shop-frontend start",
-    "backend": "PORT=3001 npm --prefix record-shop-backend run watch",
+    "backend": "cd record-shop-backend; PORT=3001 npx nodemon ./bin/www",
     "install-all": "( cd record-shop-backend; yarn install; ); ( cd record-shop-frontend; yarn install; );"
   },
   "author": "fbw9@dus",
