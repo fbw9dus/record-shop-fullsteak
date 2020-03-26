@@ -7,7 +7,7 @@
     "start": "npx concurrently \"npm run frontend\" \"npm run backend\"",
     "frontend": "npm --prefix record-shop-frontend start",
     "backend": "cd record-shop-backend; PORT=3001 npx nodemon ./bin/www",
-    "dependencies": "npm install; git submodule init; git submodule update; cd record-shop-backend; yarn checkout solution/06-validation; yarn add nodemon; cd ..; npx yarn install-all",
+    "dependencies": "npm install; git submodule init; git submodule update; cd record-shop-backend; git checkout solution/06-validation; yarn add nodemon; cd ..; npx yarn install-all",
     "install-all": "( cd record-shop-backend; npx yarn install; ); ( cd record-shop-frontend; npx yarn install; );"
   },
   "author": "fbw9@dus",
