@@ -8,7 +8,7 @@
     "frontend": "npm --prefix record-shop-frontend start",
     "backend": "cd record-shop-backend; PORT=3001 npx nodemon ./bin/www",
     "dependencies": "git submodule init; git submodule update; cd record-shop-backend; git checkout task/05-mongoose-controllers-solution; yarn add nodemon; cd ..; npx yarn install; npx yarn install-all; npx yarn install",
-    "install-all": "( cd record-shop-backend; npx yarn install; ); ( cd record-shop-frontend; npx yarn install; );"
+    "install-all": "npm install; ( cd record-shop-backend; npx yarn install; ); ( cd record-shop-frontend; npx yarn install; );"
   },
   "author": "fbw9@dus",
   "license": "GPL-3.0",
