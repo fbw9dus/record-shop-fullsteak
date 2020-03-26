@@ -1,6 +1,6 @@
 [submodule "record-shop-backend"]
 	path = record-shop-backend
-	url = https://github.com/ulzq/record-shop-backend
+	url = https://github.com/fbw9dus/record-shop
 [submodule "record-shop-frontend"]
 	path = record-shop-frontend
-	url = https://github.com/ulzq/record-shop-frontend
+	url = https://github.com/fbw9dus/record-shop-frontend
