@@ -10,6 +10,7 @@
     "update-frontend":  "cd record-shop-frontend && git reset --hard origin master                 && git pull",
     "update-Backend":   "cd record-shop-backend  && git reset --hard origin solution/09-deployment && git pull",
     "update-all":       "npm run update-backend  && npm run update-frontend",
+    "seed":             "npm --prefix record-shop-backend run seed",
     "dependencies":     "npm install && git submodule init && git submodule update && cd record-shop-backend && git checkout solution/09-deployment && cd .. && npm run install-all && npm run seed",
     "install-backend":  "cd record-shop-backend  && npm install",
     "install-frontend": "cd record-shop-frontend && npm install",
