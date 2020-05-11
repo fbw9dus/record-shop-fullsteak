@@ -4,17 +4,23 @@
   "description": "frontend und backend gleichzeitig laufen lassen",
   "main": "index.js",
   "scripts": {
-    "start": "npx concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "npm --prefix record-shop-frontend start",
-    "backend": "cd record-shop-backend; PORT=3001 npx nodemon ./bin/www",
-    "dependencies": "npm install; git submodule init; git submodule update; cd record-shop-backend; git checkout solution/06-validation; yarn add nodemon; cd ..; npx yarn install-all",
-    "install-all": "( cd record-shop-backend; npx yarn install; ); ( cd record-shop-frontend; npx yarn install; );"
+    "start":            "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend":         "npm --prefix record-shop-frontend start",
+    "backend":          "cd record-shop-backend  && PORT=3001 nodemon ./bin/www",
+    "update-frontend":  "cd record-shop-frontend && git reset --hard origin master                 && git pull",
+    "update-Backend":   "cd record-shop-backend  && git reset --hard origin solution/09-deployment && git pull",
+    "update-all":       "npm run update-backend  && npm run update-frontend",
+    "dependencies":     "npm install && git submodule init && git submodule update && cd record-shop-backend && git checkout solution/09-deployment && npm run seed && cd .. && npm run install-all",
+    "install-backend":  "cd record-shop-backend  && npm install",
+    "install-frontend": "cd record-shop-frontend && npm install",
+    "install-all":      "npm run install-backend && npm run install-frontend"
   },
   "author": "fbw9@dus",
   "license": "GPL-3.0",
   "dependencies": {
-    "yarn": "*",
+    "concurrently": "^5.1.0",
+    "dotenv": "^8.2.0",
     "nodemon": "*",
-    "concurrently": "^5.1.0"
+    "yarn": "*"
   }
 }
